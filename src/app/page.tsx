@@ -3,7 +3,7 @@
 export default function Home() {
   
   return (
-    <div className=" ">
+    <div className=" bg-black text-white ">
       {/* Main Headline */}
       <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-start tracking-tighter m-4 ">
         DESIGN WITH VISION
@@ -61,7 +61,7 @@ export default function Home() {
   className="overflow-hidden "
   style={{ transform: "rotate(-5deg)", padding: "1rem 0" }}
 >
-  <div className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10">
+  <div className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10 ">
     CAPTURE. CREATE. INSPIRE. CAPTURE. CREATE. INSPIRE. CAPTURE. CREATE. INSPIRE.
   </div>
   <div

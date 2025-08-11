@@ -1,25 +1,25 @@
 export default function Footer() {
   return (
-    <footer className="bg-red-600 text-black py-6 flex flex-col items-center justify-center">
-      <div className="">
+    <footer className="bg-orange-600 text-black py-6 flex flex-col items-center justify-center">
+      <div >
         <div>
-        <div className="text-3xl text-left max-w-xl  m-5">
+        <div className="text-3xl text-left max-w-xl  m-4">
             <p className="text-2xl  sm:text-3xl font-semibold">
       Welcome to my portfolio! I’m Zaid, a passionate developer crafting digital
       experiences that are clean, modern, and user-friendly.
     </p>
         </div>
-<div className="mb-8 px-4 flex flex-col md:flex-row md:justify-between md:items-start gap-6 w-full">
+<div className="mb-8 px-4 flex flex-col  md:flex-row md:justify-between md:items-start gap-6 w-full">
   {/* Left side: Intro Text */}
   <div className="w-full md:w-1/2 text-center md:text-left">
     
-    <p className="mt-2 text-xs sm:text-sm text-gray-900 max-w-md mx-auto md:mx-0">
+    <p className="mt-2 text-left text-xs sm:text-sm text-gray-900 max-w-md mx-auto md:mx-0">
       Explore my diverse projects showcasing creativity and technical expertise, connect with me on various social platforms to stay updated, and let’s collaborate to build innovative, impactful, and unforgettable digital experiences that push boundaries and bring your ideas to life!
     </p>
   </div>
 
   {/* Middle: Terms & Conditions */}
-  <div className="w-full md:w-1/6 text-center md:text-left">
+  <div className="w-full md:w-1/6  md:text-left">
     <h2 className="text-lg font-bold mb-2">Terms & Conditions</h2>
     <ul className="text-xs sm:text-sm text-gray-900 space-y-1 list-disc list-inside">
       <li><a href="/terms-of-service" className="hover:underline">Terms of Service</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
   </div>
 
   {/* Right side: Contact */}
-  <div className="w-full md:w-1/3 text-center md:text-left">
+  <div className="w-full md:w-1/3  md:text-left">
     <h2 className="text-lg font-bold mb-2">Contact</h2>
     <p className="text-xs sm:text-sm text-gray-900">
       Email: <a href="mailto:contact@myportfolio.com" className="hover:underline">contact@myportfolio.com</a>
@@ -47,9 +47,11 @@ export default function Footer() {
 
 
        
-      <span className="block w-full font-black tracking-tight leading-none select-none text-[38vw] sm:text-[15vw] md:text-[38vw]  ">
+ <h1 className="w-full font-black tracking-tight leading-none select-none uppercase text-[41vw] sm:text-[18vw] md:text-[41vw] lg:text-[41vw] text-center antialiased break-words">
   ZAID
-</span>
+</h1>
+
+
 
 
         <p className="text-center">&copy; {new Date().getFullYear()} MyPortfolio. All rights reserved.</p>

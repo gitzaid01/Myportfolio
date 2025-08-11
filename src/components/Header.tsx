@@ -19,8 +19,8 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="text-white shadow-md bg-black fixed top-0 left-0 w-full z-50">
-      <nav className="container mx-auto flex justify-between items-center py-4 px-4 sm:px-6">
+    <header className="  text-white shadow-md bg-black fixed top-0 left-0 w-full z-50">
+      <nav className=" mx-auto flex justify-between items-center py-4 px-4 sm:px-6">
         {/* Logo + Quote */}
         <div className="flex items-center flex-wrap">
           <Link href="/" className="text-5xl font-extrabold mr-2 whitespace-nowrap">
