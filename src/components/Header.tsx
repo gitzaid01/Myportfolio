@@ -26,10 +26,11 @@ export default function Header() {
           <Link href="/" className="text-5xl font-extrabold mr-2 whitespace-nowrap">
             ZAID
           </Link>
-          <p className="text-white font-bold text-[8px] sm:text-[10px] tracking-tighter max-w-[170px] sm:max-w-[200px]">
-            "He who has a why to live can bear almost any how, for purpose makes the impossible possible."
-            <i> Friedrich Nietzsche</i>
-          </p>
+           <p className="text-white font-bold text-[8px] sm:text-[10px] tracking-tighter max-w-[170px] sm:max-w-[200px]">
+  &quot;He who has a why to live can bear almost any how, for purpose makes the impossible possible.&quot;
+  <i> Friedrich Nietzsche</i>
+</p>
+
         </div>
 
         {/* Desktop Nav Links */}
