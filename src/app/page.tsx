@@ -1,103 +1,234 @@
 import Image from "next/image";
 
 export default function Home() {
+  
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className=" ">
+      {/* Main Headline */}
+      <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-start tracking-tighter m-4 ">
+        DESIGN WITH VISION
+        <br /> DEVELOP WITH PRECISION
+        <br /> DELIVER WITH IMPACT
+      </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Short Intro */}
+
+      {/* News-style About Me */}
+      <div className="bg-gray-100 max-w-full shadow-md mb-6 text-left h-96 ">
+        {/* Content here */}
+      </div>
+
+      {/* Insights Section */}
+      <div className="flex flex-col md:flex-row text-left justify-center items-center md:items-start m-4 ">
+        <div className="w-full md:w-[500px]">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+            Introducing Myself
+          </h3>
+
+          <div>
+            <button className="text-sm sm:text-base text-black mt-4 mb-6 border bg-white px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">
+              Explore my journey
+            </button>
+          </div>
+
+          <p className="text-white leading-relaxed text-base sm:text-lg tracking-wide">
+            I wholeheartedly believe in the art and science of crafting digital experiences that transcend the ordinary creations that don’t just look visually stunning, but also generate real, measurable results that leave a lasting impact. Every pixel I place, every line of code I write, is driven by an unwavering passion for transforming challenges into elegant solutions through the power of design and development. For me, each project is more than just a task to complete; it is a living, breathing vision brought to life with meticulous attention to detail, purposeful intent, and a relentless focus on the needs of the user. This craft is not merely my profession, it is the core of my creative existence, a way to turn bold ideas into tangible realities that inspire, engage, and truly matter in the digital world.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Featured Projects Section */}
+      <div className="flex flex-col items-center justify-center mt-10 mb-10 bg-white shadow-md  ">
+        <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter border-b-4 border-gray-300 pb-4 text-center">
+          FEATURED
+        </span>
+        <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter text-center pt-4">
+          WORKS
+        </span>
+      </div>
+
+      {/* Services Section */}
+      <section className="py-12 ">
+        <div className="max-w-7xl mx-auto  text-center">
+          <h3 className="text-xl sm:text-2xl md:text-5xl font-bold text-white mb-4">
+            Elevate Your Digital Presence
+          </h3>
+          <h1 className="font-extrabold mb-8 text-white text-7xl sm:text-9xl md:text-8xl lg:text-[200px] tracking-tighter">
+            SERVICES
+          </h1>
+         {/* Multi-line Marquee */}
+<div
+  className="overflow-hidden "
+  style={{ transform: "rotate(-5deg)", padding: "1rem 0" }}
+>
+  <div className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10">
+    CAPTURE. CREATE. INSPIRE. CAPTURE. CREATE. INSPIRE. CAPTURE. CREATE. INSPIRE.
+  </div>
+  <div
+    className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10"
+    style={{ animationDirection: "reverse" }}
+  >
+    INNOVATE. DESIGN. DELIVER. INNOVATE. DESIGN. DELIVER. INNOVATE. DESIGN. DELIVER.
+  </div>
+  <div className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10">
+    BUILD. OPTIMIZE. SCALE. BUILD. OPTIMIZE. SCALE. BUILD. OPTIMIZE. SCALE.
+  </div>
+</div>
+
+
+          
+          
+      
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-20 bg-white py-10  mx-auto ">
+  {/* Service 1: Web Development */}
+  <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group">
+    <div className="relative w-full max-w-full h-72 sm:h-96 bg-black overflow-hidden mb-6 rounded-lg">
+      {/* Icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 m-auto h-16 w-16 text-indigo-600 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+        />
+      </svg>
+
+      {/* Image */}
+      <img
+        src="./image2.jpg"
+        alt="Web Development"
+        className="absolute top-0 left-0 w-full h-full object-cover -translate-x-full opacity-0 transition-transform transition-opacity duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
+      />
+    </div>
+
+    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-black text-left w-full max-w-xs tracking-tight">
+      Web Development
+    </h3>
+    <p className="text-black max-w-xs text-left text-sm sm:text-base">
+      Building responsive, performant, and scalable websites tailored to your brand and goals.
+    </p>
+  </div>
+
+  {/* Service 2: UI/UX Design */}
+  <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group">
+    <div className="relative w-full max-w-full h-72 sm:h-96 bg-black overflow-hidden mb-6 rounded-lg">
+      {/* Icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 m-auto h-16 w-16 text-indigo-600 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15.232 5.232l3.536 3.536M16.5 7l-9 9-4 1 1-4 9-9z"
+        />
+      </svg>
+
+      {/* Image */}
+      <img
+        src="./image1.jpg"
+        alt="UI/UX Design"
+        className="absolute top-0 left-0 w-full h-full object-cover -translate-x-full opacity-0 transition-transform transition-opacity duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
+      />
+    </div>
+
+    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-black text-left w-full max-w-xs">
+      UI/UX Design
+    </h3>
+    <p className="text-black max-w-xs text-left text-sm sm:text-base">
+      Crafting intuitive and engaging user experiences that keep your audience coming back.
+    </p>
+  </div>
+
+  {/* Service 3: Consulting & Strategy */}
+  <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group">
+    <div className="relative w-full max-w-full h-72 sm:h-96 bg-black overflow-hidden mb-6 rounded-lg">
+      {/* Icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 m-auto h-16 w-16 text-indigo-600 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M11 3a7 7 0 00-4 12.9v2.1a1 1 0 002 0v-2.1a7 7 0 004-12.9zM12 17h.01"
+        />
+      </svg>
+
+      {/* Image */}
+      <img
+        src="./image3.jpg"
+        alt="Consulting & Strategy"
+        className="absolute top-0 left-0 w-full h-full object-cover -translate-x-full opacity-0 transition-transform transition-opacity duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
+      />
+    </div>
+
+    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-black text-left w-full max-w-xs">
+      Consulting & Strategy
+    </h3>
+    <p className="text-black max-w-xs text-left text-sm sm:text-base">
+      Helping you define the right digital strategies to maximize impact and growth.
+    </p>
+  </div>
+
+  {/* Service 4: Content Writing */}
+  <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group">
+    <div className="relative w-full max-w-full h-72 sm:h-96 bg-black overflow-hidden mb-6 rounded-lg">
+      {/* Icon */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 m-auto h-16 w-16 text-indigo-600 transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12h6m-6 4h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h7l5 5v9a2 2 0 01-2 2z"
+        />
+      </svg>
+
+      {/* Image */}
+      <img
+        src="./image4.jpg"
+        alt="Content Writing"
+        className="absolute top-0 left-0 w-full h-full object-cover -translate-x-full opacity-0 transition-transform transition-opacity duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
+      />
+    </div>
+
+    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-black text-left w-full max-w-xs">
+      Content Writing
+    </h3>
+    <p className="text-black max-w-xs text-left text-sm sm:text-base">
+      Crafting compelling content that resonates with your audience and drives engagement.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+ </div>
+      </section>
+
+      
     </div>
   );
 }
