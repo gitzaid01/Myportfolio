@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased bg-black text-white`}
       >
         <Header />
-        <main className=" py-20 px-2 bg-black max-w-full">{children}</main>
+        <main className=" py-20  bg-black max-w-full">{children}</main>
         <Footer />
       </body>
     </html>

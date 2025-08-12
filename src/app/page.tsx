@@ -96,16 +96,16 @@ export default function Home() {
         className="w-full h-auto max-h-[500px] object-cover"
       />
 
-      <div className="flex items-center gap-3 mt-3 pt-3 text-white w-full justify-center">
+      <div className="flex items-center gap-3 mt-3 pt-3 text-white w-full justify-center ">
         <button
           onClick={togglePlay}
-          className="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition"
+          className="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition "
         >
           {isPlaying ? "⏸" : "▶"}
         </button>
         <span className="text-sm font-medium">Listen to article</span>
         <span className="text-gray-400 text-xs">{duration}</span>
-        <audio ref={audioRef} src="/my-audio.mp3" />
+        <audio ref={audioRef} src="/audio.mp3" />
       </div>
     </div>
 
@@ -189,8 +189,12 @@ export default function Home() {
           </h1>
           {/* Multi-line Marquee */}
           <div
-            className="overflow-hidden "
-            style={{ transform: "rotate(-5deg)", padding: "1rem 0" }}
+            className="overflow-hidden"
+             style={{
+    transform: "rotate(-5deg) scale(0.97)", // slight shrink to prevent overflow
+    padding: "1rem 0", // extra horizontal padding
+    // boxSizing: "border-box",
+  }}
           >
             <div className="inline-block marquee text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-widest px-10 ">
               CAPTURE. CREATE. INSPIRE. CAPTURE. CREATE. INSPIRE. CAPTURE.
@@ -209,9 +213,11 @@ export default function Home() {
             </div>
           </div>
 
+
+          {/* Service Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-20 bg-white py-10  mx-auto ">
             {/* Service 1: Web Development */}
-            <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group">
+            <div className="flex flex-col items-start h-auto sm:h-[500px] px-2 group ">
               <div className="relative w-full max-w-full h-72 sm:h-96 bg-black overflow-hidden mb-6 rounded-lg">
                 {/* Icon */}
                 <svg
@@ -354,6 +360,13 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+
+
+
+
+
+          
         </div>
       </section>
     </div>
