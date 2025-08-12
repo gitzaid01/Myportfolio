@@ -54,7 +54,7 @@ export default function Footer() {
 
 
 
-        <p className="text-center">&copy; {new Date().getFullYear()} MyPortfolio. All rights reserved.</p>
+        <p className="text-center text-sm">&copy; {new Date().getFullYear()} MyPortfolio. All rights reserved.</p>
         
 
         {/* Contact and Social Links */}
