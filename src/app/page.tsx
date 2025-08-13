@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 
 export default function Home() {
@@ -11,6 +12,40 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState("0:00");
+
+
+
+
+
+   const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        setStatus(" Message sent successfully!");
+        form.current?.reset();
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setStatus(" Failed to send message. Try again.");
+        setLoading(false);
+      });
+  };
+
 
   // Format seconds into mm:ss
   const formatTime = (time: number) => {
@@ -93,7 +128,7 @@ export default function Home() {
       <img
         src="./image5.png"
         alt="Example"
-        className="w-full h-auto max-h-[500px] object-cover"
+        className="w-full h-auto max-h-[700px] object-cover"
       />
 
       <div className="flex items-center gap-3 mt-3 pt-3 text-white w-full justify-center ">
@@ -169,19 +204,19 @@ export default function Home() {
       </div>
 
       {/* Featured Projects Section */}
-      <div className="flex flex-col items-center justify-center mt-10 mb-10 bg-white shadow-md  ">
-        <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter border-b-4 border-gray-300 pb-4 text-center">
+      <div className="flex flex-col items-center justify-center mt-10 mb-10 bg-amber-300 shadow-md  ">
+        <span className="text-7xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter border-b-4 border-black pb-4 text-center">
           FEATURED
         </span>
-        <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter text-center pt-4">
+        <span className="text-7xl sm:text-7xl md:text-8xl lg:text-[200px] font-extrabold text-black tracking-tighter text-center pt-4">
           WORKS
         </span>
       </div>
 
       {/* Services Section */}
-      <section className="py-12 ">
+      <section className=" ">
         <div className="max-w-7xl mx-auto  text-center">
-          <h3 className="text-xl sm:text-2xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-white mb-4">
             Elevate Your Digital Presence
           </h3>
           <h1 className="font-extrabold mb-8 text-white text-7xl sm:text-9xl md:text-8xl lg:text-[200px] tracking-tighter">
@@ -369,6 +404,133 @@ export default function Home() {
           
         </div>
       </section>
+
+      <section
+      id="contact"
+      className=" text-white mt-16 px-6 sm:px-10 lg:px-20"
+    >
+      <div className="max-w-5xl  text-center">
+        {/* Heading */}
+       <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 text-left">
+  Get In Touch
+</h2>
+
+        <p className="text-gray-400 text-sm  text-left ">
+          I’d love to hear from you! Whether you have a question, a project idea,
+          or just want to say hello drop a message below.
+        </p>
+
+        {/* Form */}
+     <section className=" text-white mt-5 flex items-center justify-center">
+      <div className="w-full rounded-lg  ">
+    
+      
+
+        <form ref={form} onSubmit={sendEmail} className="space-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+            className="w-full p-3 rounded bg-black border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+          />
+          <input
+            type="email"
+            name="from_email"
+            placeholder="Your Email"
+            required
+            className="w-full p-3 rounded bg-black border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+          />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows={5}
+            required
+            className="w-full p-3 rounded bg-black border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+          ></textarea>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-white text-black py-3 rounded-full hover:bg-gray-300 transition"
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        {status && (
+          <p className="mt-4 text-center text-sm text-gray-300">{status}</p>
+        )}
+      </div>
+    </section>
+
+        {/* Social Links */}
+        <div className="mt-12 flex justify-center gap-6">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            className="text-gray-400 hover:text-white transition"
+          >
+            <i className="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            className="text-gray-400 hover:text-white transition"
+          >
+            <i className="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="mailto:youremail@example.com"
+            className="text-gray-400 hover:text-white transition"
+          >
+            <i className="fas fa-envelope text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+      <div className="bg-green-500 py-6 overflow-hidden">
+      <div className="">
+        {/* Line 1 */}
+        <div className="whitespace-nowrap overflow-hidden">
+          <div
+            className="inline-block text-black font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-widest animate-marquee"
+          >
+            LET’S COLLABORATE • TURN IDEAS INTO REALITY • BUILD SOMETHING AMAZING •
+            LET’S COLLABORATE • TURN IDEAS INTO REALITY • BUILD SOMETHING AMAZING •
+          </div>
+        </div>
+
+        {/* Line 2 - reverse */}
+        <div className="whitespace-nowrap overflow-hidden">
+          <div
+            className="inline-block text-black font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-widest animate-marquee-reverse"
+          >
+            DESIGN • DEVELOP • DEPLOY • CREATE • INNOVATE • SCALE • DESIGN • DEVELOP • DEPLOY • CREATE • INNOVATE • SCALE •
+          </div>
+        </div>
+
+        {/* Line 3 */}
+        <div className="whitespace-nowrap overflow-hidden">
+          <div
+            className="inline-block text-black font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-widest animate-marquee"
+          >
+            LET’S WORK TOGETHER • START YOUR PROJECT TODAY • UNLEASH YOUR BRAND’S POTENTIAL •
+            LET’S WORK TOGETHER • START YOUR PROJECT TODAY • UNLEASH YOUR BRAND’S POTENTIAL •
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
     </div>
   );
 }
